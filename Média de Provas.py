@@ -18,7 +18,7 @@ print('com as notas da p1 {} e da p2 {}\n a média é igual a {}'.format(p1, p2,
 if(media>=6):
       print('PARABÉNS VOCE FOI MUITO BEM')
 else:
-      print('tu é um lixo mesmo')
+      print('precisa estudar mais!')
 
 
 # In[23]:
@@ -37,7 +37,7 @@ else:
         if(media >=5 and media <6):
             print('QUASE MANO')
         else: 
-            print('tu é um lixo mesmo')
+            print('precisa estudar mais!')
 
     
 
