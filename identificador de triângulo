@@ -1,0 +1,18 @@
+# In[23]:
+
+
+a=int(input('Digite o número do Cateto Oposto: '))
+b=int(input('Digite o número do Cateto Adjacente: '))
+c=int(input('Digite o número da Hipotenusa: '))
+
+if((a<b+c) and (c<a+b) and (b<a+c)):
+    print('É um Triângulo')
+    if((a==b) and (b==c)):
+        print('Equilátero')
+    else:
+        if((a==b) or (b==c) or (a==c)):
+            print('Isósceles')
+        else:
+            print('Escaleno')
+else:
+    print('Não é um triângulo')
