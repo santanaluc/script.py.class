@@ -1,0 +1,32 @@
+# In[1]:
+
+
+a=int(input('Digite a primeira variável: '))
+b=int(input('Digite a segunda variável: '))
+
+if(a==b):
+    print(str(a),'=',str(b))
+else:
+    if(a>b):
+        print(str(a), 'é maior que ', str (b))
+    else:
+        print(str(b), 'é maior que ', str (a))
+        
+
+#com três variáveis:
+
+a=int(input('Digite o número da variável: '))
+b=int(input('Digite o número da variavel: '))
+c=int(input('Digite o número da variavel: '))
+
+#if(a==b) or (b==c) or (c==a):
+ #   print('Digite variáveis diferentes')
+if((a==b) and (b==c)):
+    print('são iguais')
+else:
+    if((a>b) and (a>c)):
+        print("O maior número é ",str(a))
+    elif(b>c):
+        print("O maior número é ",str(b))
+    else:
+        print("O maior número é ", str(c))        
