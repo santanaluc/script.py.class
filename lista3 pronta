@@ -1,0 +1,446 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# 1.	Mostrar a seguinte série: 1, 2, 3, ...,50
+
+# In[2]:
+
+
+
+tirarfim = 1;
+for n in range(1,51):
+    tirarfim += 1
+    if(tirarfim == 51):
+        print(n, end=".")
+    else:
+        print(n, end=", ")
+    
+
+
+# 2.	Mostrar a seguinte série: 1, 3, 5, 7,..., 99
+# 
+
+# In[4]:
+
+
+tirarfim = 1;
+for n in range(1,100):
+    tirarfim += 1
+    if(tirarfim == 100):
+        print(n, end=".")
+    else:
+        print(n, end=", ")
+
+
+# 3.	Mostrar a seguinte série: 1, 2, 3,...,N
+
+# In[7]:
+
+
+maximo = int(input("Digite o valor máximo que deseja mostrar: "))
+tirarfim = 1;
+for n in range(1,maximo+1):
+    tirarfim += 1
+    if(tirarfim == maximo+1):
+        print(n, end=".")
+    else:
+        print(n, end=", ")
+
+
+# 4.	Calcular e exibir a seguinte série: 1+2+3+...+50. 
+
+# In[11]:
+
+
+tirarfim = 1;
+soma = 0
+for n in range(1,51):
+    tirarfim += 1
+    if(tirarfim == 51):
+        print(n, end=".")
+    else:
+        print(n, end=", ")
+    soma = soma + n
+print("\nO resultado da soma é: {}".format(soma))
+
+
+# 5.	Calcular o seguinte produto: 1x2x3x4x5
+# 
+
+# In[14]:
+
+
+tirarfim = 1;
+produto = 1
+for n in range(1,6):
+    produto = produto * n
+print("\nO resultado do produto é: {}".format(produto))
+
+
+# 6.	Calcular e exibir a quantidade de números pares compreendidos entre M e N, inclusive.
+
+# In[23]:
+
+
+inicio= int(input("Digite o início do intervalo: "))
+fim = int(input("Digite o fim do intervalo: "))
+tirarfim = inicio;
+par = 0
+for n in range(inicio, fim+1):
+    tirarfim += 1
+    if(n % 2 == 0):
+        if(tirarfim == fim+1):
+            print(n, end=".")
+        else:
+            print(n, end=", ")
+        par += 1
+print("\nA quantidade de numeros pares entre {} e {} é: {}".format(inicio,fim,par))
+        
+
+
+# 7.	Calcular a soma dos números pares menores que 100 e ao final imprimir o resultado.
+
+# In[21]:
+
+
+soma = 0
+for n in range(0,100):
+    if(n % 2 == 0):
+        soma = soma + n
+print("A soma dos números pares menores que 100 é: {}".format(soma))
+
+
+# 8.	Calcular um valor A elevado a um expoente B. Os valores A e B deverão ser lidos. Não usar A**B ou AˆB.
+
+# In[23]:
+
+
+import math
+
+resultado = 0
+base = float(input("Digite o valor da base: "))
+expoente = float(input("Digite o valor do expoente: "))
+resultado = math.pow(base,expoente)
+print("O resultado da exponenciação é: {:.2f}".format(resultado))
+
+
+# 9.	Faça um algoritmo para: <br>
+# a). Ler um valor x qualquer<br>
+#  	b) Calcular Y = (x+1) + (x+2) + (x+3) + (x+4) + (x+5) + … (x+100).
+# 
+
+# In[27]:
+
+
+x = float(input("Digite o valor de x: "))
+y = 0
+for n in range(1,101):
+    y += x + n
+print("O valor da equação y = (x+1)+(x+2)...(x+100) com valor de x = {} é: {:.2f}".format(x,y))
+
+
+# 10.	Faça um algoritmo para mostrar os 20 primeiros termos da seguinte sequencia: 
+# 3, 9, 27, 81,…. e, em seguida, mostrar a soma dos elementos gerados.
+# 
+
+# In[34]:
+
+
+import math
+
+resultado = 0
+tirarfim = 1
+for x in range(1,21):
+    resultado = math.pow(3,x)
+    tirarfim += 1
+    if(tirarfim == 21):
+        print("{:.0f}".format(resultado), end=".")
+    else:
+        print("{:.0f}".format(resultado), end=", ")
+
+
+# 11.	Faça um algoritmo para calcular a série Fibonacci até 0 N-ésimo termo. A série tem a seguinte forma:  1, 1, 2, 3, 5, 8, 13, 21, 34,…
+
+# In[1]:
+
+
+result = 1
+y = 0
+fn = 1
+tirarfim = 1
+for i in range(0,20):
+    if(i == 0):
+        print(fn, end=", ")
+    else:
+        fn = result + y
+        y = result
+        result = fn
+        tirarfim += 1
+        if(tirarfim == 20):
+            print(fn, end=".")
+        else:
+            print(fn, end=", ")
+
+
+# 12.	Faça um algoritmo para calcular o fatorial de um número inteiro, qualquer. 
+
+# In[15]:
+
+
+numero = int(input("Digite um numero inteiro para fazer a fatorial: "))
+resultado = 1
+for n in range(1, numero+1):
+    resultado = resultado * n
+print("A fatorial de {:.0f} é: {:.0f}".format(numero,resultado))
+
+
+# 13.	Faça um algoritmo para ler um valor X e calcular 
+# Y = X+2X+3X+4X+5X+…+20X
+# 
+
+# In[16]:
+
+
+x = float(input("Digite o valor de x: "))
+y = 0
+for n in range(1,21):
+    y += x * n
+print("O valor da equação y = X+2X+3X...20X com valor de x = {} é: {:.2f}".format(x,y))
+
+
+# 14.	O valor aproximado de PI pode ser calculado usando-se a série
+#  
+# sendo   ,  fazer um algoritmo para calcular e escrever o valor de PI com 51 termos
+# 
+
+# In[19]:
+
+
+import math
+s = 0
+pi = 0
+for n in range(1,52,2):
+    s += (1/n**3)
+pi = (s*32)**(1/3)
+print(pi)
+
+
+# 15.	Construa um algoritmo que verifique se um dado número inteiro é primo.
+
+# In[8]:
+
+
+x = int(input("Digite o valor de um número para verificação: "))
+for n in range(2,x+1):
+    if(x % n == 0):
+        if(x == n):
+            print("Numero primo")
+        else:
+            print("Não é numero primo")
+        break
+
+
+# 16.	Faça um algoritmo para somar os números pares compreendidos entre 1 e 100 e ao  final imprimir o resultado. 
+
+# In[22]:
+
+
+
+tirarfim = 1;
+par = 0
+for n in range(1, 101):
+    tirarfim += 1
+    if(n % 2 == 0):
+        if(tirarfim == 101):
+            print(n, end=".")
+        else:
+            print(n, end=", ")
+        par += 1
+print("\nA quantidade de numeros pares entre {} e {} é: {}".format("1","100",par))
+
+
+# 17.	Faça um algoritmo para mostrar  os n termos da sequencia: 3,9,27,81,.... e, em seguida, exibir a soma dos elementos gerados. 
+
+# In[26]:
+
+
+import math
+maximo = int(input("Digite o máximo de caracteres que deseja: "))
+resultado = 0
+tirarfim = 1
+soma = 0
+for x in range(1,maximo + 1):
+    resultado = math.pow(3,x)
+    soma = soma + resultado
+    tirarfim += 1
+    if(tirarfim == maximo + 1):
+        print("{:.0f}".format(resultado), end=".")
+    else:
+        print("{:.0f}".format(resultado), end=", ")
+print("\nO resultado da soma é: {:.0f}".format(soma))
+
+
+# 18.	Gerar e exibir 50 números aleatórios entre 0 e 99.
+
+# In[31]:
+
+
+import random
+
+tirarfim = 1
+r = 0
+for x in range(1,51):
+    r = random.randint(1,99)
+    tirarfim += 1
+    if(tirarfim == 51):
+        print("{:.0f}".format(r), end=".")
+    else:
+        print("{:.0f}".format(r), end=", ")
+
+
+# 19.	Gerar e exibir 50 números aleatórios entre 50 e 100.
+
+# In[32]:
+
+
+import random
+
+tirarfim = 1
+r = 0
+for x in range(1,51):
+    r = random.randint(50,100)
+    tirarfim += 1
+    if(tirarfim == 51):
+        print("{:.0f}".format(r), end=".")
+    else:
+        print("{:.0f}".format(r), end=", ")
+
+
+# 20.	Tentando descobrir se um dado era viciado, um dono de cassino honesto lançou-o n vezes. Escreva um algoritmo que leia um número inteiro positivo n e os n resultados dos lançamentos, e determine o número de ocorrências de cada face.
+
+# In[38]:
+
+
+ocorrencia = int(input("Digite quantas vezes você lançou: "))
+n1 = 0
+n2 = 0
+n3 = 0
+n4 = 0
+n5 = 0
+n6 = 0
+for n in range(1, ocorrencia+1):
+    numero = int(input("Digite o número que caiu: "))
+    if(numero == 1):
+        n1 += 1
+    if(numero == 2):
+        n2 += 1
+    if(numero == 3):
+        n3 += 1
+    if(numero == 4):
+        n4 += 1
+    if(numero == 5):
+        n5 += 1
+    if(numero == 6):
+        n6 += 1
+print("A quantidade de numero 1 foi: {:.0f}".format(n1))
+print("A quantidade de numero 2 foi: {:.0f}".format(n2))
+print("A quantidade de numero 3 foi: {:.0f}".format(n3))
+print("A quantidade de numero 4 foi: {:.0f}".format(n4))
+print("A quantidade de numero 5 foi: {:.0f}".format(n5))
+print("A quantidade de numero 6 foi: {:.0f}".format(n6))
+
+
+# 21.	A) Somatório: Construa os algoritmos que calculem os seguintes somatórios:
+
+# In[45]:
+
+
+soma = 0
+for n in range(1,6):
+    soma += n**2
+print("A somatória do sigma é: {:.0f}".format(soma))
+
+
+# In[44]:
+
+
+numero = int(input("Digite o número máximo: "))
+prod = 0
+for n in range(1,numero + 1):
+    prod = n + prod
+print("A somatória do sigma é: {:.0f}".format(prod))
+
+
+# 22.	Tabela: Exibir a seguinte série no formato de tabela.
+
+# In[72]:
+
+
+numero = 11
+for n in range(11,28):
+    if(n == 16):
+        numero = numero + 5    
+        print("")
+    if(numero == 26):
+        numero = numero + 5   
+        print("")
+    
+    if(n != 16 and n != 26):
+        print(numero, end=" ")
+        numero += 1
+        
+
+
+# 23.	Tabela: Exibir a seguinte série no formato de tabela.
+
+# In[74]:
+
+
+numero = 11
+for n in range(11,39):
+    if(n == 16):
+        numero = numero + 5    
+        print("")
+    if(numero == 26):
+        numero = numero + 5   
+        print("")
+    if(numero == 36):
+        numero = numero + 5   
+        print("")
+    if(numero == 46):
+        numero = numero + 5   
+        print("")
+    
+    if(n != 16 and n != 26 and n != 36 and n!= 46):
+        print(numero, end=" ")
+        numero += 1
+
+
+# 24.	Conversão de temperatura: Escrever um algoritmo que exibe uma tabela de graus Celsius/Fahrenheit de 0 a 100, variando 1 grau de cada vez, uma temperatura por linha.  A fórmula de conversão é dada por:
+
+# In[79]:
+
+
+f = 0
+for c in range(0,101):
+    f = (9/5)*c+32
+    print(c," -- ","{:.0f}".format(f))
+
+
+# 25.	Tabuada - Elabore um programa que lê um número de 1 a 9 e mostra a tabuada de multiplicação do número. Por exemplo, para o número 5, temos:
+
+# In[80]:
+
+
+numero = int(input("Qual número deseja multilicar?: "))
+mult = 0
+for x in range(1,11):
+    mult = x * numero
+    print("{} x {} = {}".format(numero,x,mult))
+
+
+# In[ ]:
+
+
+
+
