@@ -35,9 +35,9 @@ else:
         print('PARABÉNS VOCE FOI MUITO BEM')
     else:
         if(media >=5 and media <6):
-            print('QUASE MANO')
+            print('QUASE.')
         else: 
-            print('precisa estudar mais!')
+            print('Precisa estudar mais!')
 
     
 
