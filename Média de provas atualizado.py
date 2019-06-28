@@ -26,12 +26,12 @@ else:
           if(media1>=6):
               print('PARABÉNS VOCÊ FOI MUITO BEM!')
           else:
-              print('Tu é um lixo mesmo.')
+              print('Quase')
       else:
           media2 = (p2+p3)/2
           print('Com as notas da P2: {} e da P3: {}\nA média é igual a: {}'.format(p2, p3, media2))
           if(media2>=6):
               print('PARABÉNS VOCÊ FOI MUITO BEM!')
           else:
-              print('Tu é um lixo mesmo.')
+              print('Quase.')
 
